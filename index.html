@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Heat-Kings — Coming Soon</title>
+  <meta name="description" content="Heat-Kings — Building the Operating System for Germany's Energy Transition." />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      /* Extracted from logo */
+      --hk-bg: #01122C;
+      --hk-accent: #FE6601;
+
+      --text: #EAF1FF;
+      --muted: rgba(234, 241, 255, 0.72);
+      --muted-2: rgba(234, 241, 255, 0.55);
+      --hairline: rgba(234, 241, 255, 0.12);
+
+      --radius: 16px;
+    }
+
+    *{ box-sizing: border-box; }
+    html, body { height: 100%; }
+
+    body{
+      margin: 0;
+      background: var(--hk-bg); /* MUST match logo background */
+      color: var(--text);
+      font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    .page{
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      padding: 40px 20px 18px;
+    }
+
+    .main{
+      flex: 1;
+      display: grid;
+      place-items: center;
+      text-align: center;
+    }
+
+    .stack{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 18px;
+      max-width: 920px;
+    }
+
+    .logo{
+      width: 200px;
+      height: auto;
+      display: block;
+      user-select: none;
+      -webkit-user-drag: none;
+      filter: drop-shadow(0 14px 28px rgba(0,0,0,.35));
+    }
+
+    h1{
+      margin: 8px 0 0;
+      font-weight: 600;
+      letter-spacing: -0.02em;
+      line-height: 1.08;
+      font-size: clamp(26px, 3.4vw, 44px);
+    }
+
+    .sub{
+      margin: 0;
+      color: var(--muted);
+      font-family: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+      font-size: clamp(13px, 1.4vw, 15px);
+      letter-spacing: 0.01em;
+    }
+
+    .snippet{
+      margin-top: 6px;
+      border: 1px solid var(--hairline);
+      border-radius: var(--radius);
+      padding: 10px 14px;
+      background: rgba(255,255,255,0.03);
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      box-shadow: 0 10px 30px rgba(0,0,0,.18);
+    }
+
+    .prompt{
+      color: var(--muted-2);
+      user-select: none;
+    }
+
+    .pill{
+      color: var(--text);
+      white-space: nowrap;
+    }
+
+    .pill .accent{
+      color: var(--hk-accent);
+      font-weight: 500;
+    }
+
+    .contact{
+      margin-top: 10px;
+      font-size: 14px;
+      color: var(--muted);
+    }
+
+    a{
+      color: var(--text);
+      text-decoration: none;
+      border-bottom: 1px solid rgba(234, 241, 255, 0.22);
+      padding-bottom: 2px;
+      transition: border-color .15s ease, color .15s ease, transform .15s ease;
+    }
+    a:hover{
+      border-bottom-color: var(--hk-accent);
+      color: #ffffff;
+    }
+    a:focus-visible{
+      outline: 2px solid var(--hk-accent);
+      outline-offset: 4px;
+      border-bottom-color: transparent;
+      border-radius: 6px;
+    }
+
+    footer{
+      display: flex;
+      justify-content: center;
+      padding-top: 18px;
+      color: var(--muted-2);
+      font-size: 12px;
+    }
+
+    footer .sep{ opacity: .5; padding: 0 8px; }
+
+    /* Respect reduced motion */
+    @media (prefers-reduced-motion: reduce){
+      *{ transition: none !important; }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="page">
+    <main class="main">
+      <section class="stack" aria-label="Heat-Kings Coming Soon">
+        <img class="logo" src="./logo.png" alt="Heat-Kings logo" />
+
+        <h1>Building the Operating System for Germany's Energy Transition.</h1>
+
+        <div class="snippet" aria-label="Positioning statement">
+          <span class="prompt">$</span>
+          <span class="pill"><span class="accent">SaaS</span> | Deep Tech | Simulation</span>
+        </div>
+
+        <p class="contact">
+          <a href="mailto:contact@heat-kings.de">contact@heat-kings.de</a>
+        </p>
+      </section>
+    </main>
+
+    <footer>
+      <span>© 2026 Heat-Kings.</span>
+      <span class="sep">|</span>
+      <a href="#" aria-label="Impressum">Impressum</a>
+    </footer>
+  </div>
+</body>
+</html>
